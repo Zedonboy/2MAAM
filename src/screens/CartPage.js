@@ -4,23 +4,23 @@ import LeftIcon from "@material-ui/icons/ArrowBackIos";
 import { useHistory } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import { useSelector } from "react-redux";
-const cartx = [
-  {
-    name: "Wardrobe",
-    cost: 200,
-    qty: 3,
-  },
-  {
-    name: "Wardrobe",
-    cost: 200,
-    qty: 3,
-  },
-  {
-    name: "Wardrobe",
-    cost: 200,
-    qty: 3,
-  },
-];
+// const cartx = [
+//   {
+//     name: "Wardrobe",
+//     cost: 200,
+//     qty: 3,
+//   },
+//   {
+//     name: "Wardrobe",
+//     cost: 200,
+//     qty: 3,
+//   },
+//   {
+//     name: "Wardrobe",
+//     cost: 200,
+//     qty: 3,
+//   },
+// ];
 export default function CartPage() {
   let history = useHistory();
   let carts = useSelector(state => state.cart.value)

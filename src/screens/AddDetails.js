@@ -5,25 +5,25 @@ import LeftIcon from "@material-ui/icons/ArrowBackIos";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addCartItem, removeCartItem, updateCartItem } from "../store/slices/cart.slice";
-const serviceCat = [
-  {
-    name: "Laundry",
-    icon: "fa-tshirt",
-    cost: 200,
-  },
+// const serviceCat = [
+//   {
+//     name: "Laundry",
+//     icon: "fa-tshirt",
+//     cost: 200,
+//   },
 
-  {
-    name: "Cooking",
-    icon: "fa-utensils",
-    cost: 300,
-  },
+//   {
+//     name: "Cooking",
+//     icon: "fa-utensils",
+//     cost: 300,
+//   },
 
-  {
-    name: "Home Cleaning",
-    icon: "fa-broom",
-    cost: 400,
-  },
-];
+//   {
+//     name: "Home Cleaning",
+//     icon: "fa-broom",
+//     cost: 400,
+//   },
+// ];
 
 export default function AddDetails() {
   let history = useHistory();

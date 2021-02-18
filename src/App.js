@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import NoNetwork from "./screens/no-network";
 import SignIn from "./screens/login";
@@ -28,7 +27,7 @@ function App() {
     get("darkMode").then(data => dispatch(updateDarkMode(data ?? false)))
     dispatch(fetchServiceCat(null))
     dispatch(fetchUser(null))
-  }, [])
+  })
 
   return (
     <ThemeProvider theme={theme}>   

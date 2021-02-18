@@ -26,39 +26,39 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCurrentServiceItems } from "../store/slices/serviceSubCat.slice";
 import OrderConfirmedPage from "./OrderConfirmed";
 
-const serviceCat = [
-  {
-    name: "Laundry",
-    icon: "fa-tshirt",
-  },
+// const serviceCat = [
+//   {
+//     name: "Laundry",
+//     icon: "fa-tshirt",
+//   },
 
-  {
-    name: "Cooking",
-    icon: "fa-utensils",
-  },
+//   {
+//     name: "Cooking",
+//     icon: "fa-utensils",
+//   },
 
-  {
-    name: "Home Cleaning",
-    icon: "fa-broom",
-  },
-];
+//   {
+//     name: "Home Cleaning",
+//     icon: "fa-broom",
+//   },
+// ];
 
-const subCat = [
-  {
-    name: "Laundry",
-    icon: "fa-tshirt",
-  },
+// const subCat = [
+//   {
+//     name: "Laundry",
+//     icon: "fa-tshirt",
+//   },
 
-  {
-    name: "Cooking",
-    icon: "fa-utensils",
-  },
+//   {
+//     name: "Cooking",
+//     icon: "fa-utensils",
+//   },
 
-  {
-    name: "Home Cleaning",
-    icon: "fa-broom",
-  },
-];
+//   {
+//     name: "Home Cleaning",
+//     icon: "fa-broom",
+//   },
+// ];
 
 export default function Home() {
   let user = useSelector((state) => state.user.value);
