@@ -39,7 +39,7 @@ export default function CartPage() {
             <LeftIcon />
           </IconButton>
         </div>
-        <p className="ml-4 text-white font-light text-xl">Notification</p>
+        <p className="ml-4 text-white font-light text-xl">Cart</p>
       </header>
       <section className="p-2 mt-12 justify-center flex flex-col">
         <div className="overflow-y-auto">

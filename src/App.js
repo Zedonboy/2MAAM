@@ -6,11 +6,12 @@ import NoNetwork from "./screens/no-network";
 import SignIn from "./screens/login";
 import SignUp from "./screens/register";
 import Home from "./screens/Home";
-import {get} from "idb-keyval";
-import { useDispatch } from "react-redux";
+import { get } from "idb-keyval";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchServiceCat } from "./store/slices/serviceList.slice";
 import { updateDarkMode } from "./store/slices/app.slice";
 import { fetchUser } from "./store/slices/user.slice";
+import { Helmet } from "react-helmet";
 
 const theme = createMuiTheme({
   palette: {
@@ -19,18 +20,26 @@ const theme = createMuiTheme({
       dark: "#059669",
     },
   },
-})
+});
 function App() {
-  let dispatch = useDispatch()
+  let dispatch = useDispatch();
+  let darkMode = useSelector(state => state.appConfig.darkMode)
   useEffect(() => {
     // seed the store values
-    get("darkMode").then(data => dispatch(updateDarkMode(data ?? false)))
-    dispatch(fetchServiceCat(null))
-    dispatch(fetchUser(null))
-  })
+    get("darkMode").then((data) => dispatch(updateDarkMode(data ?? false)));
+    dispatch(fetchServiceCat(null));
+    dispatch(fetchUser(null));
+  });
 
   return (
-    <ThemeProvider theme={theme}>   
+    <ThemeProvider theme={theme}>
+      <Helmet>
+        <meta name="description" content="Todos!" />
+        {darkMode ? (
+          <meta name="theme-color" content="#1F2937" />
+        ) : (<meta name="theme-color" content="#5B21B6" />)}
+        
+      </Helmet>
       <Router>
         <Switch>
           <Route path="/no_network">

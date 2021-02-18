@@ -35,6 +35,7 @@ export default function SettingsPage() {
       <FormControlLabel control={<Checkbox checked={darkMode} color="secondary" onChange={e => {
         dispatch(updateDarkMode(e.target.checked))
         set("darkMode", e.target.checked)
+        setDarkMode(e.target.checked)
       }}/>} label={<p className="dark:text-gray-200">Dark Mode</p>}/>
     </section>
     </section>
