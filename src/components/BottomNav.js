@@ -20,7 +20,6 @@ export function Item({ icon, count = 0, label, className, active, notify, onClic
             style={{
               color: active ? "#059669" : "gray",
             }}
-            size="small"
           >
             {icon}
           </IconButton>

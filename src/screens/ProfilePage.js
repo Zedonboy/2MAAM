@@ -29,6 +29,10 @@ let orders = [
 export default function ProfilePage() {
   let history = useHistory();
   let user = useSelector((state) => state.user.value);
+  if(!user){
+    history.push("/login?redirect_to=profile")
+    return null
+  }
   return (
     <>
       <header className="flex fixed right-0 top-0 left-0 items-center h-12 bg-purple-800 dark:bg-gray-800">

@@ -5,6 +5,7 @@ import cartRedducer from "./slices/cart.slice"
 import serviceCatReducer from "./slices/serviceList.slice"
 import serviceSubCategoryReducer from "./slices/serviceSubCat.slice"
 import appRducer from "./slices/app.slice"
+import jwtReducer from './slices/jwt.slice'
 export default configureStore({
     reducer : {
         user : userReducer,
@@ -12,6 +13,7 @@ export default configureStore({
         cart : cartRedducer,
         serviceCategory: serviceCatReducer,
         serviceSubCategory: serviceSubCategoryReducer,
-        appConfig: appRducer
+        appConfig: appRducer,
+        jwt : jwtReducer
     }
 })

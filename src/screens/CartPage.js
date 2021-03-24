@@ -24,6 +24,7 @@ import { useSelector } from "react-redux";
 export default function CartPage() {
   let history = useHistory();
   let carts = useSelector(state => state.cart.value)
+  let jwt = useSelector(state => state.jwt.value)
   return (
     <main className="h-5/6">
       <header className="flex fixed right-0 top-0 left-0 items-center h-12 bg-purple-800 dark:bg-gray-800">
@@ -50,6 +51,7 @@ export default function CartPage() {
         </div>
         <div className="fixed right-2 left-2 bottom-16">
           <Button disabled={carts.length === 0} onClick={e => {
+            if(!jwt) history.push("/login?redirect_to=profile")
             history.push("/orderConfirmed")
           }} variant="contained" className="mb-1 w-full" color="secondary">
             Pay

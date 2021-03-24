@@ -1,0 +1,1 @@
+export const appName = "Home Service App"

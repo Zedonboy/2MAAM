@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import ServiceCategoryItem from "../components/ServiceCategory";
 import { Button, CircularProgress, IconButton } from "@material-ui/core";
@@ -25,6 +25,7 @@ import SettingsPage from "./SettingsPage";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentServiceItems } from "../store/slices/serviceSubCat.slice";
 import OrderConfirmedPage from "./OrderConfirmed";
+import { fetchServiceCat } from "../store/slices/serviceList.slice";
 
 // const serviceCat = [
 //   {
@@ -67,6 +68,10 @@ export default function Home() {
   let dispatch = useDispatch()
   let history = useHistory();
   let location = useLocation();
+  useEffect(() => {
+    dispatch(fetchServiceCat())
+    // eslint-disable-next-line
+  }, [])
   let [selectedCat, setSelectedCat] = useState(0);
   let homeActive =
     matchPath(location.pathname, {

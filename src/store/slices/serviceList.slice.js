@@ -10,26 +10,26 @@ export const fetchServiceCat = createAsyncThunk(
             icon: "fa-tshirt",
             subCategory: [
               {
-                name: "Laundry",
+                name: "Cloth Washing",
                 icon: "fa-tshirt",
                 serviceItems: [
                   {
                     id: 1,
-                    name: "Laundry",
+                    name: "Wash Undies",
                     icon: "fa-tshirt",
                     cost: 100,
                   },
 
                   {
                     id: 2,
-                    name: "Cooking",
+                    name: "Wash Baby Wear",
                     icon: "fa-utensils",
                     cost: 100,
                   },
 
                   {
                     id: 3,
-                    name: "Home Cleaning",
+                    name: "Wash Bed Sheets",
                     icon: "fa-broom",
                     cost: 100,
                   },
@@ -37,26 +37,26 @@ export const fetchServiceCat = createAsyncThunk(
               },
 
               {
-                name: "Cooking",
+                name: "House Clean",
                 icon: "fa-utensils",
                 serviceItems: [
                   {
                     id: 1,
-                    name: "Laundry",
+                    name: "Clean Electronics",
                     icon: "fa-tshirt",
                     cost: 100,
                   },
 
                   {
                     id: 2,
-                    name: "Cooking",
+                    name: "Mop the floor",
                     icon: "fa-utensils",
                     cost: 100,
                   },
 
                   {
                     id: 3,
-                    name: "Home Cleaning",
+                    name: "Clean Garage",
                     icon: "fa-broom",
                     cost: 100,
                   },
@@ -64,26 +64,26 @@ export const fetchServiceCat = createAsyncThunk(
               },
 
               {
-                name: "Home Cleaning",
+                name: "Environment Cleaning",
                 icon: "fa-broom",
                 serviceItems: [
                   {
                     id: 1,
-                    name: "Laundry",
+                    name: "Dispose Refuse",
                     icon: "fa-tshirt",
                     cost: 100,
                   },
 
                   {
                     id: 2,
-                    name: "Cooking",
+                    name: "Clean Kitchen",
                     icon: "fa-utensils",
                     cost: 100,
                   },
 
                   {
                     id: 3,
-                    name: "Home Cleaning",
+                    name: "Mow the Lawn",
                     icon: "fa-broom",
                     cost: 100,
                   },
@@ -266,7 +266,7 @@ export const fetchServiceCat = createAsyncThunk(
             ],
           },
         ]),
-        4000
+        20000
       )
     );
   }
@@ -288,7 +288,7 @@ const serviceCatSlice = createSlice({
     [fetchServiceCat.fulfilled]: (state, action) => {
       state.error = null;
       state.status = "succeeded";
-      state.value.push(...action.payload);
+      state.value = action.payload;
     },
 
     [fetchServiceCat.rejected]: (state, action) => {
