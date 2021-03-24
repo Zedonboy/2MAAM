@@ -32,15 +32,16 @@ function App() {
   useEffect(() => {
     // seed the store values
     get("darkMode").then((data) => dispatch(updateDarkMode(data ?? false)));
-    get("jwt").then(jwt => {
-      if(jwt) {
-        get("user").then(user => {
-          if(user) dispatch(UpdateUser(user))
-          else dispatch(fetchUser(jwt));
-        })
-        dispatch(updateJwt(jwt))
-      }
-    })
+    dispatch(fetchUser())
+    // get("jwt").then(jwt => {
+    //   if(jwt) {
+    //     get("user").then(user => {
+    //       if(user) dispatch(UpdateUser(user))
+    //       else dispatch(fetchUser(jwt));
+    //     })
+    //     dispatch(updateJwt(jwt))
+    //   }
+    // })
     // eslint-disable-next-line
   }, []);
 

@@ -26,7 +26,7 @@ export default function SettingsPage() {
           <LeftIcon />
         </IconButton>
       </div>
-      <p className="ml-4 text-white font-light text-xl">Profile</p>
+      <p className="ml-4 text-white font-light text-xl">Settings</p>
     </header>
     <section className="p-2 mt-12 flex justify-center flex-col">
     <section className="bg-white dark:bg-gray-800 m-1 flex flex-col rounded p-2 shadow">
