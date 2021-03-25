@@ -13,9 +13,9 @@ import Home from "./screens/Home";
 import { get } from "idb-keyval";
 import { useDispatch, useSelector } from "react-redux";
 import { updateDarkMode } from "./store/slices/app.slice";
-import { fetchUser, UpdateUser } from "./store/slices/user.slice";
+import { fetchUser } from "./store/slices/user.slice";
 import { Helmet } from "react-helmet";
-import { updateJwt } from "./store/slices/jwt.slice";
+//import { updateJwt } from "./store/slices/jwt.slice";
 
 const theme = createMuiTheme({
   palette: {
